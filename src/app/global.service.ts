@@ -12,7 +12,9 @@ export class GlobalService {
       'Durga Traders',
       'Srivnivas mobiles',
       true,
-      2000
+      2000,
+      0,
+      5
     ),
     new Invoice(
       '2',
@@ -20,7 +22,9 @@ export class GlobalService {
       'Durga Traders',
       'Vishnu mobiles',
       true,
-      10000
+      10000,
+      1,
+      5
     ),
     new Invoice(
       '3',
@@ -28,7 +32,9 @@ export class GlobalService {
       'Durga Traders',
       'Srivnivas foods',
       true,
-      300
+      2500,
+      5,
+      7
     ),
     new Invoice(
       '4',
@@ -36,7 +42,9 @@ export class GlobalService {
       'Durga Traders',
       'Karthik sporting goods',
       true,
-      2000
+      2000,
+      5,
+      5
     ),
     new Invoice(
       '5',
@@ -44,11 +52,19 @@ export class GlobalService {
       'Durga Traders',
       'Srikanth gift shop',
       true,
-      50
+      5000,
+      4,
+      10
     ),
   ]
   get invoice(){
     return [...this.invoices];
+  }
+  getInvoice(id:string){
+    return {...this.invoices.find(i=>id===i.id)};
+  }
+  getInvoiceByName(name:string){
+    return [...this.invoices.filter(i=>name===i.senderName)];
   }
   constructor() { }
 }

@@ -6,4 +6,25 @@
 
 <ion-content>
 
+  <ion-grid >
+    <ion-row>
+      <ion-col size="12" size-sm="8" offset-sm="2">
+
+            <ion-card *ngFor="let task of allTasks" [routerLink]="['/','home',task.id]">
+              <ion-card-header>
+                <ion-card-title>
+                  {{task.recieverName}}
+                </ion-card-title>
+                <ion-card-subtitle>
+                  Remaining: {{task.installmentsRemaining}} of {{task.totalInstallments}}
+                </ion-card-subtitle>
+                <ion-card-content>
+                  <ion-progress-bar color="warning" value="0.25"> </ion-progress-bar>
+                </ion-card-content>
+              </ion-card-header>
+            </ion-card>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

@@ -5,7 +5,9 @@ export   class Invoice{
     public senderName:string,
     public recieverName:string,
     public paymentStatus:boolean,
-    public paymentAmount:number
+    public paymentAmount:number,
+    public installmentsRemaining : number,
+    public totalInstallments:number
   ){}
 
 
