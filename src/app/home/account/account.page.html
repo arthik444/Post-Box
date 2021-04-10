@@ -1,0 +1,54 @@
+<ion-toolbar>
+  <ion-buttons slot="secondary">
+    <ion-button>
+      <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+    </ion-button>
+    <ion-button>
+      <ion-icon slot="icon-only" name="search"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-buttons slot="primary">
+    <ion-button color="secondary">
+      <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-title>PostBox</ion-title>
+</ion-toolbar>
+
+
+
+<ion-content>
+
+  <ion-item-sliding  *ngFor="let invoice of loadedInvoices" [routerLink]="['/','account-deail']" id="invoice.id">
+    <ion-item >
+      <ion-avatar item-left>
+        <img [src]="invoice.imageUrl">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ invoice.recieverName }}</h2>
+        <p>A new message in your network</p>
+        <p>Oceanic Next has joined your network</p>
+      </ion-label>
+      <ion-note slot="end">
+        {{ invoice.paymentAmount | currency }}
+      </ion-note>
+    </ion-item>
+
+    <ion-item-options side="start">
+      <ion-item-option>
+        <ion-icon slot="icon-only" name="archive-outline"></ion-icon>
+      </ion-item-option>
+    </ion-item-options>
+
+    <ion-item-options side="end">
+      <ion-item-option color="danger">
+        <ion-icon slot="icon-only" name="trash"></ion-icon>
+      </ion-item-option>
+      <ion-item-option>
+        <ion-icon slot="icon-only" name="star"></ion-icon>
+      </ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+</ion-content>
+
+

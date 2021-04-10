@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home/tabs/billing"></ion-back-button>
+    </ion-buttons>
+    <ion-title>create</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+        <ion-card >
+
+
+          <ion-card-header>
+            <ion-card-subtitle>New Invoice</ion-card-subtitle>
+            <ion-card-title>PostBox</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+
+
+
+
+
+
+            <ion-item>
+              <ion-label position="floating">Shipment</ion-label>
+              <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Amount</ion-label>
+              <ion-input></ion-input>
+            </ion-item>
+            <div style="margin-top:10px">
+              <ion-button>
+                <ion-icon name="barcode-outline" slot="start">
+                  Scan reciever's QR
+                </ion-icon>
+                <h3>
+                  Scan reciever's QR
+
+                </h3>
+              </ion-button>
+              <p>Or</p>
+              <ion-item>
+                <ion-label position="floating">Reciever's PostBoxId</ion-label>
+                <ion-input></ion-input>
+              </ion-item>
+            </div>
+
+          </ion-card-content>
+        </ion-card>
+
+
+
+        <ion-fab  vertical="bottom" horizontal="center" position="fixed">
+          <ion-fab-button>
+            <ion-icon name="share"></ion-icon>
+          </ion-fab-button>
+
+        </ion-fab>
+
+
+</ion-content>
