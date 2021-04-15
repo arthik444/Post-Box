@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
-  constructor() { }
+  constructor(public modCtrl : ModalController) { }
 
   ngOnInit() {
   }
-
+  async dismiss() {
+    await this.modCtrl.dismiss();
+  }
 }

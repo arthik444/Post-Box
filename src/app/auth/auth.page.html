@@ -1,6 +1,6 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>Welcome to Postbox</ion-title>
+    <ion-title>Hey There!</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -8,7 +8,12 @@
 
 
   <ion-slides [options]="option" class="ion-margin-top" pager="true">
-
+    <ion-slide>
+      <ion-card>
+        <img src="../../assets/postbox.svg">
+        <ion-card-title>Welcome to PostBox. Let's get started.</ion-card-title>
+      </ion-card>
+    </ion-slide>
 
     <ion-slide>
       <ion-card>
@@ -32,6 +37,6 @@
     </ion-slide>
 
   </ion-slides>
-    <ion-button expand="full" color="dark" routerLink="/auth/login">LOGIN</ion-button>
-    <ion-button expand="full" color="dark" routerLink="/auth/signup">SIGNUP</ion-button>
+    <ion-button expand="full" color="dark" (click)="login()">LOGIN</ion-button>
+    <ion-button expand="full" color="dark" (click)="register()">SIGN UP</ion-button>
 </ion-content>

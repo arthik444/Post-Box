@@ -1,12 +1,25 @@
-<ion-header class="ion-no-border">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/auth"></ion-back-button>
-    </ion-buttons>
-    <ion-title>Signup</ion-title>
-  </ion-toolbar>
+
+<ion-header>
+
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content class="ion-padding">
+  <div class="title">
+    <h4>Signup</h4>
+    <p>Register with PostBox to get started</p>
+  </div>
 
+  <ion-input placeholder="Buisness Name" class="primary-input"></ion-input>
+  <ion-input placeholder="Number" class="primary-input"></ion-input>
+  <ion-input placeholder="Password" type="password" class="primary-input"></ion-input>
+
+  <p>By signing up you're agreed to our Terms & Conditions</p>
+
+  <div class="ion-margin-top">
+    <ion-button expand="block" (click)="register()">SIGN UP</ion-button>
+  </div>
+
+  <div class="ion-margin-top ion-text-center">
+    <a (click)="dismiss()">Close</a>
+  </div>
 </ion-content>
