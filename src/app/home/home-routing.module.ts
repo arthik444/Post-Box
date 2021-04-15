@@ -49,10 +49,6 @@ const routes: Routes = [
     redirectTo:'home/tabs/account',
     pathMatch:'full'
   },
-  {
-    path: ':invoiceId',
-    loadChildren: () => import('./invoice-detail/invoice-detail.module').then( m => m.InvoiceDetailPageModule)
-  }
 
 ];
 

@@ -16,7 +16,12 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren:()=>import('./home/home.module').then(m=>m.HomePageModule)
+  },
+  {
+    path: ':trader-account',
+    loadChildren: () => import('./trader-account/trader-account.module').then( m => m.TraderAccountPageModule)
   }
+
 
 ];
 @NgModule({
