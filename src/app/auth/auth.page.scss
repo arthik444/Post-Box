@@ -1,0 +1,34 @@
+ion-title {
+  font-weight: 600;
+}
+
+ion-card {
+  width: 100%;
+  height: 500px;
+  box-shadow: none;
+  border-radius: 12px;
+  border-color:black;
+
+  img {
+      width: 100%;
+      height:80%;
+      transform: scale(1.1, 1.1) rotate(1deg);
+      transition: 600ms all ease-in-out;
+  }
+}
+
+.swiper-slide-active {
+  transform: scale(1.05, 1.05);
+
+  ion-card {
+      img {
+          transform: scale(1, 1);
+      }
+      margin-bottom:90px;
+  }
+}
+
+.swiper-slide {
+  transition: 400ms all ease-in-out;
+}
+

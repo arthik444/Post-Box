@@ -1,9 +1,37 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>auth</ion-title>
+    <ion-title>Welcome to Postbox</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
 
+
+  <ion-slides [options]="option" class="ion-margin-top" pager="true">
+
+
+    <ion-slide>
+      <ion-card>
+        <img src="../../assets/organise.svg">
+        <ion-card-title>Quickly share and organise invoices on the go.</ion-card-title>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <img src="../../assets/collaborate.svg">
+        <ion-card-title>Collaborate to accomplish tasks and stay up to date.</ion-card-title>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <img src="../../assets/progress.svg">
+        <ion-card-title>Watch your buisness take shape and progress.</ion-card-title>
+      </ion-card>
+    </ion-slide>
+
+  </ion-slides>
+    <ion-button expand="full" color="dark" routerLink="/auth/login">LOGIN</ion-button>
+    <ion-button expand="full" color="dark" routerLink="/auth/signup">SIGNUP</ion-button>
 </ion-content>
