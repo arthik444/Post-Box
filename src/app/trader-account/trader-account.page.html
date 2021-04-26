@@ -48,9 +48,9 @@
       </ion-row>
     </div>
       </ion-grid>
+      </ion-item>
 
 
-</ion-item>
   <div class="ion-padding">
     <ion-row class="ion-align-items-center ion-padding-horizontal">
       <ion-col size="6">
@@ -64,10 +64,13 @@
     </ion-row>
 
 
+<ion-list>
 
-    <ion-list>
+
+
+
       <ion-item *ngFor="let bill of traderModel.bills">
-        <ion-card >
+        <ion-card size="3">
           <ion-card-header>
             <ion-row class="ion-align-items-center">
               <ion-col size="6">
@@ -86,16 +89,26 @@
             </ion-row>
           </ion-card-header>
           <ion-card-content>
-            <ion-img src="https://www.wikihow.com/images/a/a1/Write-a-Receipt-Step-9-Version-2.jpg"></ion-img>
             <ion-row>
               <ion-col size="8">
-                <ion-card-title>{{bill.ShipmentName}}</ion-card-title>
+                <h1>{{bill.ShipmentName}}</h1>
                 <ion-card-subtitle>{{bill.amount | currency:'INR':'symbol':'4.0-5'}}</ion-card-subtitle>
               </ion-col>
-              <ion-col size="4" class="ion-text-right">
-                <ion-button fill="clear" color="dark" size="large" routerLink="/details">
-                  <ion-icon slot="icon-only" name="chevron-forward-circle-outline"></ion-icon>
-                </ion-button>
+              <ion-col size="2" class="ion-text-right">
+                <ion-buttons fill="clear" color="dark">
+
+                      <ion-icon slot="icon-only" name="chatbubble-outline"></ion-icon>
+
+
+                </ion-buttons>
+              </ion-col>
+              <ion-col size="2" class="ion-text-right">
+                <ion-buttons fill="clear" color="dark"  routerLink="/details">
+
+
+                        <ion-icon slot="icon-only" name="arrow-forward"></ion-icon>
+
+                </ion-buttons>
               </ion-col>
             </ion-row>
           </ion-card-content>
@@ -104,7 +117,11 @@
 
 
 
-    </ion-list>
+
+
+
+</ion-list>
+
 
 
   </div>
